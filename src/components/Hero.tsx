@@ -49,7 +49,7 @@ const Hero = () => {
           </p>
           
           {/* Voice Assistant Button */}
-          <div className="relative z-50 mb-32 transform scale-125">
+          <div className="relative z-50 mb-12 flex justify-center">
             <button
               onClick={() => {
                 if (window.startVapiCall) {
@@ -64,8 +64,9 @@ const Hero = () => {
               </svg>
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl animate-pulse" />
             </button>
-            <VoiceAssistant />
           </div>
+          
+          <VoiceAssistant />
           
           {/* Stats */}
           <div className="relative z-40 flex justify-center items-center space-x-8 mb-16 text-sm md:text-base">
