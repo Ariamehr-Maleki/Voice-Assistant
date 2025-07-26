@@ -49,12 +49,12 @@ const Hero = () => {
           </p>
           
           {/* Voice Assistant Button */}
-          <div className="mb-24 transform scale-125">
+          <div className="relative z-50 mb-32 transform scale-125">
             <VoiceAssistant />
           </div>
           
           {/* Stats */}
-          <div className="flex justify-center items-center space-x-8 mb-12 text-sm md:text-base">
+          <div className="relative z-40 flex justify-center items-center space-x-8 mb-16 text-sm md:text-base">
             <div className="text-center">
               <div className="text-2xl font-bold text-primary">99.5%</div>
               <div className="text-muted-foreground">Uptime</div>
@@ -72,8 +72,8 @@ const Hero = () => {
           </div>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <Button variant="premium" size="xl" className="w-full sm:w-auto" onClick={() => window.open('https://www.ariamehr-ai.com', '_blank')}>
+          <div className="relative z-40 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <Button variant="premium" size="xl" className="w-full sm:w-auto" onClick={() => window.open('https://www.ariamehr-ai.com/', '_blank')}>
               About Us
             </Button>
             <Button variant="hero" size="xl" className="w-full sm:w-auto">
