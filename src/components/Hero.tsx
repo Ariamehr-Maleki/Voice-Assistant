@@ -49,17 +49,19 @@ const Hero = () => {
           </p>
           
           {/* Voice Assistant Button */}
-          <VoiceAssistant className="mb-8" />
+          <div className="mb-16">
+            <VoiceAssistant className="mb-8" />
+          </div>
           
           {/* Stats */}
           <div className="flex justify-center items-center space-x-8 mb-12 text-sm md:text-base">
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary">99.9%</div>
+              <div className="text-2xl font-bold text-primary">99.5%</div>
               <div className="text-muted-foreground">Uptime</div>
             </div>
             <div className="w-px h-8 bg-border" />
             <div className="text-center">
-              <div className="text-2xl font-bold text-secondary">50ms</div>
+              <div className="text-2xl font-bold text-secondary">0.9s</div>
               <div className="text-muted-foreground">Response Time</div>
             </div>
             <div className="w-px h-8 bg-border" />
@@ -79,16 +81,6 @@ const Hero = () => {
             </Button>
           </div>
           
-          {/* Trust Indicators */}
-          <div className="mt-16 text-center">
-            <p className="text-muted-foreground text-sm mb-4">Trusted by leading companies worldwide</p>
-            <div className="flex justify-center items-center space-x-8 opacity-50">
-              <div className="text-foreground font-semibold">Microsoft</div>
-              <div className="text-foreground font-semibold">Google</div>
-              <div className="text-foreground font-semibold">Amazon</div>
-              <div className="text-foreground font-semibold">Tesla</div>
-            </div>
-          </div>
         </div>
       </div>
       
