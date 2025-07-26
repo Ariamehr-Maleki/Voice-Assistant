@@ -21,10 +21,9 @@ const VoiceAssistant: React.FC<VoiceAssistantProps> = ({ className }) => {
     const assistant = "ad229fba-f9a6-4a8f-8cd8-0d94bd51ba95";
     const apiKey = "4b25a6fd-b2a8-4582-8b46-ec0bd6a74bfa";
     const buttonConfig = {
-      position: "bottom-right",
-      offset: "40px",
-      width: "60px",
-      height: "60px",
+      position: "static", // Changed from "bottom-right" to static
+      width: "80px",
+      height: "80px",
       idle: {
         color: {
           50: "#3b82f6",
@@ -87,7 +86,7 @@ const VoiceAssistant: React.FC<VoiceAssistantProps> = ({ className }) => {
     };
   }, []);
 
-  return <div className={className} />;
+  return <div id="vapi-button-container" className={`flex justify-center mt-8 ${className}`} />;
 };
 
 export default VoiceAssistant;

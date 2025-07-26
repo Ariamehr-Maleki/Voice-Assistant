@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import heroBg from '@/assets/hero-bg.jpg';
 import voiceIcon from '@/assets/voice-icon.png';
+import VoiceAssistant from '@/components/VoiceAssistant';
 
 const Hero = () => {
   return (
@@ -46,6 +47,9 @@ const Hero = () => {
             Transform your customer experience with our revolutionary AI voice assistant. 
             <span className="text-accent-gradient font-semibold"> Intelligent, natural, and available 24/7.</span>
           </p>
+          
+          {/* Voice Assistant Button */}
+          <VoiceAssistant className="mb-8" />
           
           {/* Stats */}
           <div className="flex justify-center items-center space-x-8 mb-12 text-sm md:text-base">
