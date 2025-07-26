@@ -86,17 +86,7 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* CTA Buttons */}
-          <div className="relative z-40 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <Button variant="premium" size="xl" className="w-full sm:w-auto" onClick={() => window.open('https://www.ariamehr-ai.com/', '_blank')}>
-              About Us
-            </Button>
-            <Button variant="hero" size="xl" className="w-full sm:w-auto">
-              Watch Demo
-            </Button>
           </div>
-          
-        </div>
       </div>
       
       {/* Scroll Indicator */}
