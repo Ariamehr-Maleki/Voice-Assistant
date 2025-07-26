@@ -49,8 +49,8 @@ const Hero = () => {
           </p>
           
           {/* Voice Assistant Button */}
-          <div className="mb-16">
-            <VoiceAssistant className="mb-8" />
+          <div className="mb-24 transform scale-125">
+            <VoiceAssistant />
           </div>
           
           {/* Stats */}
@@ -73,8 +73,8 @@ const Hero = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <Button variant="premium" size="xl" className="w-full sm:w-auto">
-              Try Voice AI Now
+            <Button variant="premium" size="xl" className="w-full sm:w-auto" onClick={() => window.open('https://www.ariamehr-ai.com', '_blank')}>
+              About Us
             </Button>
             <Button variant="hero" size="xl" className="w-full sm:w-auto">
               Watch Demo
