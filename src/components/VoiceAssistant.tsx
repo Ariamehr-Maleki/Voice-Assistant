@@ -21,6 +21,11 @@ const VoiceAssistant: React.FC<VoiceAssistantProps> = ({ className }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
+    // Prevent multiple initializations
+    if (window.startVapiCall) {
+      return;
+    }
+
     const assistant = "ad229fba-f9a6-4a8f-8cd8-0d94bd51ba95";
     const apiKey = "4b25a6fd-b2a8-4582-8b46-ec0bd6a74bfa";
     const buttonConfig = {
@@ -54,12 +59,14 @@ const VoiceAssistant: React.FC<VoiceAssistantProps> = ({ className }) => {
             vapiButton.click();
           } else {
             // If the button doesn't exist yet, try to find any button with Vapi styling
+            // Only click the first matching button to prevent multiple activations
             const buttons = document.querySelectorAll('button');
-            buttons.forEach(button => {
+            for (const button of buttons) {
               if (button.style.position === 'fixed' || button.textContent?.includes('vapi') || button.className?.includes('vapi')) {
                 button.click();
+                break; // Only click the first matching button
               }
-            });
+            }
           }
         };
         

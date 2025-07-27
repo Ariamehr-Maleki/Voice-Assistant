@@ -61,7 +61,7 @@ const Footer = () => {
         
         <div className="border-t border-border/50 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © 2024 Ariamehr AI Agency. All rights reserved.
+            © 2025 Ariamehr AI Agency. All rights reserved.
           </p>
           <p className="text-muted-foreground text-sm mt-4 md:mt-0">
             Built with ❤️ for the future of AI

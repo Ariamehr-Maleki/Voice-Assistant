@@ -21,10 +21,20 @@ const CTA = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
-              <Button variant="accent" size="xl" className="w-full sm:w-auto">
+              <Button 
+                variant="accent" 
+                size="xl" 
+                className="w-full sm:w-auto"
+                onClick={() => window.open('https://www.ariamehr-ai.com', '_blank')}
+              >
                 Start Free Trial
               </Button>
-              <Button variant="hero" size="xl" className="w-full sm:w-auto bg-white/10 hover:bg-white/20 border-white/20 hover:border-white/40">
+              <Button 
+                variant="hero" 
+                size="xl" 
+                className="w-full sm:w-auto bg-white/10 hover:bg-white/20 border-white/20 hover:border-white/40"
+                onClick={() => window.open('https://www.ariamehr-ai.com', '_blank')}
+              >
                 Schedule Demo
               </Button>
             </div>

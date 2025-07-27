@@ -69,14 +69,14 @@ const Hero = () => {
           <VoiceAssistant />
           
           {/* Stats */}
-          <div className="relative z-40 flex justify-center items-center space-x-8 mb-16 text-sm md:text-base">
+          <div className="relative z-40 flex justify-center items-center space-x-8 mb-8 text-sm md:text-base">
             <div className="text-center">
               <div className="text-2xl font-bold text-primary">99.5%</div>
               <div className="text-muted-foreground">Uptime</div>
             </div>
             <div className="w-px h-8 bg-border" />
             <div className="text-center">
-              <div className="text-2xl font-bold text-secondary">0.9s</div>
+              <div className="text-2xl font-bold text-secondary">900ms</div>
               <div className="text-muted-foreground">Response Time</div>
             </div>
             <div className="w-px h-8 bg-border" />
@@ -84,6 +84,26 @@ const Hero = () => {
               <div className="text-2xl font-bold text-accent">24/7</div>
               <div className="text-muted-foreground">Available</div>
             </div>
+          </div>
+          
+          {/* Action Buttons */}
+          <div className="relative z-40 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16">
+            <Button 
+              variant="default" 
+              size="lg" 
+              className="w-full sm:w-auto bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={() => window.open('https://www.ariamehr-ai.com', '_blank')}
+            >
+              Try Voice AI Now
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="w-full sm:w-auto border-gray-300 hover:border-gray-400 text-white font-semibold px-8 py-3 rounded-lg bg-black/20 backdrop-blur-sm hover:bg-black/30 transition-all duration-300"
+              onClick={() => window.open('https://www.ariamehr-ai.com', '_blank')}
+            >
+              Watch Demo
+            </Button>
           </div>
           
           </div>
