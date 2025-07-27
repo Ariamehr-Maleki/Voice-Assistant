@@ -26,8 +26,8 @@ const VoiceAssistant: React.FC<VoiceAssistantProps> = ({ className }) => {
       return;
     }
 
-    const assistant = "ad229fba-f9a6-4a8f-8cd8-0d94bd51ba95";
-    const apiKey = "4b25a6fd-b2a8-4582-8b46-ec0bd6a74bfa";
+    const assistant = import.meta.env.VITE_VAPI_ASSISTANT_ID;
+    const apiKey = import.meta.env.VITE_VAPI_API_KEY;
     const buttonConfig = {
       position: "bottom-right",
       offset: "40px",

@@ -32,7 +32,11 @@ cd <YOUR_PROJECT_NAME>
 # Step 3: Install the necessary dependencies.
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Set up environment variables.
+cp .env.example .env
+# Edit .env file and add your Vapi API key and Assistant ID
+
+# Step 5: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
@@ -49,6 +53,24 @@ npm run dev
 - Select the "Codespaces" tab.
 - Click on "New codespace" to launch a new Codespace environment.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
+
+## Environment Variables
+
+This project requires the following environment variables to be set in a `.env` file:
+
+```env
+VITE_VAPI_API_KEY=your_vapi_api_key_here
+VITE_VAPI_ASSISTANT_ID=your_vapi_assistant_id_here
+```
+
+### How to get your Vapi credentials:
+
+1. Sign up at [Vapi.ai](https://vapi.ai)
+2. Create a new assistant
+3. Get your API key from the dashboard
+4. Copy your assistant ID
+
+**Important**: Never commit your `.env` file to version control. It's already added to `.gitignore`.
 
 ## What technologies are used for this project?
 
