@@ -1,0 +1,11 @@
+{
+  "build": "npm run build",
+  "dist": "dist",
+  "static": true,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+} 
