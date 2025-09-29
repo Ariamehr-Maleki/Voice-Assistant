@@ -2,7 +2,6 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import heroBg from '@/assets/hero-bg.jpg';
 import voiceIcon from '@/assets/voice-icon.png';
-import VoiceAssistant from '@/components/VoiceAssistant';
 
 const Hero = () => {
   return (
@@ -48,25 +47,6 @@ const Hero = () => {
             <span className="text-accent-gradient font-semibold"> Intelligent, natural, and available 24/7.</span>
           </p>
           
-          {/* Voice Assistant Button */}
-          <div className="relative z-50 mb-12 flex justify-center">
-            <button
-              onClick={() => {
-                if (window.startVapiCall) {
-                  window.startVapiCall();
-                }
-              }}
-              className="group relative w-20 h-20 bg-primary/20 backdrop-blur-lg rounded-full border border-primary/30 flex items-center justify-center hover:bg-primary/30 transition-all duration-300 hover:scale-110 active:scale-95"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-primary">
-                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
-                <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
-              </svg>
-              <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl animate-pulse" />
-            </button>
-          </div>
-          
-          <VoiceAssistant />
           
           {/* Stats */}
           <div className="relative z-40 flex justify-center items-center space-x-8 mb-8 text-sm md:text-base">
