@@ -1,8 +1,11 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const CTA = () => {
+  const { t, isRTL } = useLanguage();
+
   return (
     <section className="py-24 relative">
       <div className="container mx-auto px-6">
@@ -14,20 +17,20 @@ const CTA = () => {
           
           <div className="relative z-10">
             <h2 className="text-4xl md:text-6xl font-black mb-6 text-primary-foreground">
-              Ready to Transform Your Customer Experience?
+              {t('cta.title')}
             </h2>
             <p className="text-xl md:text-2xl text-primary-foreground/80 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses already using our AI voice technology to deliver exceptional customer service.
+              {t('cta.subtitle')}
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
+            <div className={`flex flex-col sm:flex-row items-center justify-center mb-8 ${isRTL ? 'space-y-4 sm:space-y-0 sm:space-x-reverse sm:space-x-6' : 'space-y-4 sm:space-y-0 sm:space-x-6'}`}>
               <Button 
                 variant="accent" 
                 size="xl" 
                 className="w-full sm:w-auto"
                 onClick={() => window.open('https://www.ariamehr-ai.com', '_blank')}
               >
-                Start Free Trial
+                {t('cta.startTrial')}
               </Button>
               <Button 
                 variant="hero" 
@@ -35,28 +38,28 @@ const CTA = () => {
                 className="w-full sm:w-auto bg-white/10 hover:bg-white/20 border-white/20 hover:border-white/40"
                 onClick={() => window.open('https://www.ariamehr-ai.com', '_blank')}
               >
-                Schedule Demo
+                {t('cta.scheduleDemo')}
               </Button>
             </div>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-primary-foreground/70">
+            <div className={`flex flex-col sm:flex-row items-center justify-center text-primary-foreground/70 ${isRTL ? 'space-y-2 sm:space-y-0 sm:space-x-reverse sm:space-x-8' : 'space-y-2 sm:space-y-0 sm:space-x-8'}`}>
               <div className="flex items-center space-x-2">
                 <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                <span>No credit card required</span>
+                <span>{t('cta.noCreditCard')}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                <span>14-day free trial</span>
+                <span>{t('cta.freeTrial')}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                <span>24/7 support</span>
+                <span>{t('cta.support')}</span>
               </div>
             </div>
           </div>

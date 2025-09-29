@@ -1,37 +1,40 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Features = () => {
+  const { t } = useLanguage();
+  
   const features = [
     {
       icon: "🧠",
-      title: "Advanced AI Intelligence",
-      description: "Powered by cutting-edge neural networks that understand context, emotion, and intent with human-like comprehension."
+      title: t('features.ai.title'),
+      description: t('features.ai.description')
     },
     {
       icon: "⚡",
-      title: "Lightning Fast Response",
-      description: "Sub-50ms response times ensure natural, real-time conversations without awkward pauses or delays."
+      title: t('features.speed.title'),
+      description: t('features.speed.description')
     },
     {
       icon: "🌍",
-      title: "Multi-Language Support",
-      description: "Communicate fluently in over 40 languages with native accent recognition and cultural understanding."
+      title: t('features.language.title'),
+      description: t('features.language.description')
     },
     {
       icon: "🔒",
-      title: "Enterprise Security",
-      description: "Bank-grade encryption and compliance with GDPR, HIPAA, and SOC 2 Type II standards."
+      title: t('features.security.title'),
+      description: t('features.security.description')
     },
     {
       icon: "🎯",
-      title: "Smart Integration",
-      description: "Seamlessly connects with your existing CRM, helpdesk, and business tools through powerful APIs."
+      title: t('features.integration.title'),
+      description: t('features.integration.description')
     },
     {
       icon: "📊",
-      title: "Advanced Analytics",
-      description: "Real-time insights into conversation patterns, customer satisfaction, and performance metrics."
+      title: t('features.analytics.title'),
+      description: t('features.analytics.description')
     }
   ];
 
@@ -40,10 +43,10 @@ const Features = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            <span className="text-gradient">Premium Features</span>
+            <span className="text-gradient">{t('features.title')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Experience the next generation of voice AI technology with features designed for enterprise excellence.
+            {t('features.subtitle')}
           </p>
         </div>
         

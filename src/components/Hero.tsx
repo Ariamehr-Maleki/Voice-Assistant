@@ -2,8 +2,11 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import heroBg from '@/assets/hero-bg.jpg';
 import voiceIcon from '@/assets/voice-icon.png';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = () => {
+  const { t, isRTL } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
@@ -36,45 +39,44 @@ const Hero = () => {
           
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-            <span className="text-gradient">Voice AI</span>
+            <span className="text-gradient">{t('hero.title')}</span>
             <br />
-            <span className="text-foreground">for customers</span>
+            <span className="text-foreground">{t('hero.titleSuffix')}</span>
           </h1>
           
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Transform your customer experience with our revolutionary AI voice assistant. 
-            <span className="text-accent-gradient font-semibold"> Intelligent, natural, and available 24/7.</span>
+            {t('hero.subtitle')}
+            <span className="text-accent-gradient font-semibold">{t('hero.subtitleHighlight')}</span>
           </p>
           
-          
           {/* Stats */}
-          <div className="relative z-40 flex justify-center items-center space-x-8 mb-8 text-sm md:text-base">
+          <div className={`relative z-40 flex justify-center items-center mb-8 text-sm md:text-base ${isRTL ? 'space-x-reverse space-x-8' : 'space-x-8'}`}>
             <div className="text-center">
               <div className="text-2xl font-bold text-primary">99.5%</div>
-              <div className="text-muted-foreground">Uptime</div>
+              <div className="text-muted-foreground">{t('hero.uptime')}</div>
             </div>
             <div className="w-px h-8 bg-border" />
             <div className="text-center">
               <div className="text-2xl font-bold text-secondary">900ms</div>
-              <div className="text-muted-foreground">Response Time</div>
+              <div className="text-muted-foreground">{t('hero.responseTime')}</div>
             </div>
             <div className="w-px h-8 bg-border" />
             <div className="text-center">
               <div className="text-2xl font-bold text-accent">24/7</div>
-              <div className="text-muted-foreground">Available</div>
+              <div className="text-muted-foreground">{t('hero.available')}</div>
             </div>
           </div>
           
           {/* Action Buttons */}
-          <div className="relative z-40 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16">
+          <div className={`relative z-40 flex flex-col sm:flex-row items-center justify-center mb-16 ${isRTL ? 'space-y-4 sm:space-y-0 sm:space-x-reverse sm:space-x-6' : 'space-y-4 sm:space-y-0 sm:space-x-6'}`}>
             <Button 
               variant="default" 
               size="lg" 
               className="w-full sm:w-auto bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               onClick={() => window.open('https://www.ariamehr-ai.com', '_blank')}
             >
-              Try Voice AI Now
+              {t('hero.tryNow')}
             </Button>
             <Button 
               variant="outline" 
@@ -82,7 +84,7 @@ const Hero = () => {
               className="w-full sm:w-auto border-gray-300 hover:border-gray-400 text-white font-semibold px-8 py-3 rounded-lg bg-black/20 backdrop-blur-sm hover:bg-black/30 transition-all duration-300"
               onClick={() => window.open('https://www.ariamehr-ai.com', '_blank')}
             >
-              Watch Demo
+              {t('hero.watchDemo')}
             </Button>
           </div>
           

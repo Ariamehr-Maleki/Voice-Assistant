@@ -1,31 +1,34 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const HowItWorks = () => {
+  const { t } = useLanguage();
+  
   const steps = [
     {
       number: "01",
-      title: "Quick Setup",
-      description: "Install our SDK in minutes with just a few lines of code. No complex configuration required.",
-      highlight: "5 minutes setup"
+      title: t('howItWorks.setup.title'),
+      description: t('howItWorks.setup.description'),
+      highlight: t('howItWorks.setup.highlight')
     },
     {
       number: "02",
-      title: "AI Training",
-      description: "Our AI learns your business context, tone, and specific requirements automatically.",
-      highlight: "Smart learning"
+      title: t('howItWorks.training.title'),
+      description: t('howItWorks.training.description'),
+      highlight: t('howItWorks.training.highlight')
     },
     {
       number: "03",
-      title: "Go Live",
-      description: "Deploy instantly and start serving customers with intelligent voice interactions.",
-      highlight: "Instant deployment"
+      title: t('howItWorks.live.title'),
+      description: t('howItWorks.live.description'),
+      highlight: t('howItWorks.live.highlight')
     },
     {
       number: "04",
-      title: "Scale & Optimize",
-      description: "Monitor performance and let our AI continuously improve based on real conversations.",
-      highlight: "Continuous improvement"
+      title: t('howItWorks.optimize.title'),
+      description: t('howItWorks.optimize.description'),
+      highlight: t('howItWorks.optimize.highlight')
     }
   ];
 
@@ -37,10 +40,10 @@ const HowItWorks = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            <span className="text-gradient">How It Works</span>
+            <span className="text-gradient">{t('howItWorks.title')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Get started in minutes with our streamlined process designed for modern businesses.
+            {t('howItWorks.subtitle')}
           </p>
         </div>
         
